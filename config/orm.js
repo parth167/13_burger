@@ -24,8 +24,7 @@ function objToSql(ob) {
 
 const orm = {
   selectAll: function (tableInput, cb) {
-    //   ask tutor about declaring here.... var vs let vs const?
-    var queryString = "SELECT * FROM " + tableInput + ";";
+     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
