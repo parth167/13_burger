@@ -2,10 +2,10 @@ $(function () {
     //Click event to eat a burger.
     $(".devoure-burger").on("click", function (event) {
       console.log("click working");
-      var id = $(this).data("id");
-  
+     var id = $(this).data("id");
+        console.log("id");
       // Send the DELETE request using ajax.
-      $.ajax("/api/burgers/" + id, {
+      $.ajax("/api/burger/" + id, {
         type: "PUT",
       }).then(function () {
         console.log("devoured burger", id);
@@ -19,7 +19,7 @@ $(function () {
       console.log("submit button hit");
   
       //Grab burger name from form field.
-      var newBurger = {
+     let newBurger = {
         burger_name: $("#newBurger").val().trim(),
         devoured: 0,
       };
